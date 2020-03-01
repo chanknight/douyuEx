@@ -10,9 +10,9 @@ function signYuba(group_id, t) {
 		responseType: "json",
 		headers: {
 		  "Content-Type": "application/x-www-form-urlencoded",
-		  "referer": "https://yuba.douyu.com/group/" + group_id,
 		  "dy-client": "pc",
-		  "dy-token": t
+		  "dy-token": t,
+		  'Referer': 'https://yuba.douyu.com/group/' + group_id
 		},
 		onload: function(response) {
 			if (response.response.message == "") {

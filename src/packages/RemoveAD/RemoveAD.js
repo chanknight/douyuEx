@@ -6,7 +6,6 @@ function initPkg_RemoveAD() {
             clearInterval(t);
         }
     }, 1000);
-	removeAD();
 }
 
 function removeAD() {
@@ -47,13 +46,22 @@ function removeAD() {
         a.remove();
     }
     
-    a = document.getElementsByClassName("recommendView-3e8b62")[0]
-    if (a != undefined) {
-        a.remove();
-    }
+    // a = document.getElementsByClassName("recommendView-3e8b62")[0]
+    // if (a != undefined) {
+    //     a.remove();
+    // }
+	
     // a = document.getElementsByClassName("js-room-activity")[0];
     // if (a != undefined) {
     //     a.remove();
     // }
     
+    a = document.getElementsByClassName("is-noLogin")[0];
+    if (a != undefined) {
+        a.style.display = "none"
+    }
+    a = document.getElementsByClassName("ChatSend-button")[0];
+    if (a != undefined) {
+        a.className = "ChatSend-button";
+    }
 }
